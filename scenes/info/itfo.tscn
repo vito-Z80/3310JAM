@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/info/itfo.gd" type="Script" id=1]
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=2]
+
+[node name="info" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color( 0.780392, 0.941176, 0.847059, 1 )
+margin_right = 84.0
+margin_bottom = 179.0
+custom_fonts/font = ExtResource( 2 )
+text = "DIZZY
+----------------
+A GAME
+FROM 1989
+
+by
+OLIVER TWINS
+----------------
+
+Control:
+WASD (SPACE)
+
+
+Powered by Godot
+
+
+Serdjuk 2023
+
+for
+NOKIA 3310 JAM
+5"
+align = 1
+autowrap = true

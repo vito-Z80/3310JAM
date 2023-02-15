@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/gui/lifes/lifes.gd" type="Script" id=1]
+[ext_resource path="res://scenes/gui/energy/energy.tscn" type="PackedScene" id=2]
+
+[node name="lifes" type="Node2D"]
+position = Vector2( 24, -16 )
+z_index = 50
+script = ExtResource( 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -64.0
+margin_top = -4.0
+margin_right = -46.0
+color = Color( 0.262745, 0.321569, 0.239216, 1 )
+
+[node name="ColorRect" parent="." instance=ExtResource( 2 )]
+margin_left = -63.0
+margin_top = -3.0
+margin_right = -47.0
+margin_bottom = -1.0
+
+[node name="Node2D" type="Node2D" parent="."]

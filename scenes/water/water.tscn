@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/water/water.gd" type="Script" id=1]
+[ext_resource path="res://gfx/240 water 4.png" type="Texture" id=2]
+
+[node name="water" type="Sprite"]
+z_index = 10
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 192, 8 )
+script = ExtResource( 1 )

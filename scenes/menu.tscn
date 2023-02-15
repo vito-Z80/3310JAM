@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/menu.gd" type="Script" id=2]
+[ext_resource path="res://gfx/dizzy_logo_6x21.png" type="Texture" id=3]
+[ext_resource path="res://scenes/arrow/arrow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://audio/blip5.wav" type="AudioStream" id=5]
+[ext_resource path="res://audio/blip14.wav" type="AudioStream" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "scale"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 43, 61 ), Vector2( 43, 12 ), Vector2( 43, 37 ), Vector2( 43, 12 ) ]
+}
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Start" type="Label" parent="."]
+visible = false
+self_modulate = Color( 0.780392, 0.941176, 0.847059, 1 )
+margin_left = 32.0
+margin_top = 31.0
+margin_right = 56.0
+margin_bottom = 42.0
+input_pass_on_modal_close_click = false
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.780392, 0.941176, 0.847059, 1 )
+position = Vector2( 43, 61 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/scale = SubResource( 1 )
+
+[node name="arrow" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8, 36 )
+
+[node name="arrow2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 77, 36 )
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

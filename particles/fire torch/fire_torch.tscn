@@ -1,0 +1,31 @@
+[gd_scene format=2]
+
+[node name="fire_torch" type="Node2D"]
+modulate = Color( 0.780392, 0.941176, 0.847059, 1 )
+position = Vector2( 12, 8 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 32, 32 )
+transparent_bg = true
+handle_input_locally = false
+usage = 0
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ViewportContainer/Viewport"]
+position = Vector2( 16, 0 )
+amount = 32
+lifetime = 0.5
+speed_scale = 0.83
+emission_shape = 2
+emission_rect_extents = Vector2( 4, 8 )
+spread = 0.0
+linear_accel_random = 0.42
+radial_accel = -38.22
+radial_accel_random = 0.38
+tangential_accel = 19.11

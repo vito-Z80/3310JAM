@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+
+[node name="nokia_label" type="Label"]
+margin_right = 84.0
+margin_bottom = 10.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.780392, 0.941176, 0.847059, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "test"

@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://gfx/chars/danny_3_3x19.png" type="Texture" id=1]
+[ext_resource path="res://gfx/chars/danny_2_3x19.png" type="Texture" id=2]
+[ext_resource path="res://gfx/chars/danny_1_3x19.png" type="Texture" id=3]
+[ext_resource path="res://gfx/chars/danny_4_3x19.png" type="Texture" id=4]
+[ext_resource path="res://gfx/chars/danny_saved_3x19.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "danny_on_tree",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "danny_saved",
+"speed": 5.0
+} ]
+
+[node name="Danny" type="AnimatedSprite"]
+frames = SubResource( 1 )
+animation = "danny_on_tree"
+frame = 3
+playing = true
